@@ -1,6 +1,8 @@
 const nohas = [
-    { name: "Alam Ko Uncha Rakhna Hai", audio: "./audios/noha1.mp3", img: "https://images110.b-cdn.net/19743_545474467.jpg", author: "Ali Jee and Nadeem Sarwar" },
-    { name: "Baap Se Batain Karo Akbar", audio: "./audios/noha2.mp3", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5oUrinoDg5E5hDAkdcozmrOdNfSBta6sPDQ&s", author: "Mir Hasan Mir" }
+    { name: "Alam Ko Uncha Rakhna Hai", audio: "./audios/ns.mp3", img: "https://images110.b-cdn.net/19743_545474467.jpg", author: "Ali Jee and Nadeem Sarwar",duration: "9:05" },
+    { name: "Baap Se Batain Karo Akbar", audio: "./audios/mir.mp3", img: "https://i.ytimg.com/vi/06JZxFZSIwQ/maxresdefault.jpg", author: "Mir Hasan Mir",duration: "7:54" },
+    { name: "Jungle Main Bhare Ghar Ko Luta Ayi Hai Zainab", audio: "./audios/joan.mp3", img: "https://i.ytimg.com/vi/swt8F6RWm-Q/maxresdefault.jpg", author: "Joan Rizvi",duration: "9:37" },
+    { name: "Ali Haider Ya-Karar", audio: "./audios/haider.mp3", img: "https://i.ytimg.com/vi/KWOR85zhbIg/maxresdefault.jpg", author: "Danial Bojbarah",duration: "9:30" }
 ];
 
 const audio = new Audio();
@@ -21,7 +23,7 @@ function addingNohas() {
                     <p>${noha.author}</p>
                 </div>
             </div>
-            <h3>10:32</h3>
+            <h3>${noha.duration}</h3>
         </div>`;
     });
 

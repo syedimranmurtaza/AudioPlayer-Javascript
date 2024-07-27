@@ -3,6 +3,11 @@
     src: url(fonts/Gilroy-Bold.ttf);
 }
 
+@font-face {
+    font-family: myfont2;
+    src: url(fonts/Gilroy-Light.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -49,6 +54,8 @@ body {
 .allnohas {
     height: 85%;
 }
+
+
 
 .nohacard {
     display: flex;
@@ -109,9 +116,25 @@ body {
     justify-content: center;
     align-items: center;
     gap: 11px;
+    flex-direction: column;
 }
 
-#player h3 {
+#btns{
+    display: flex;
+    gap: 13px;
+    padding-top: 6px;
+}
+
+#player h1{
+    color: white;
+    font-size: 12px;
+    font-family: myfont2;
+    font-weight: 18;
+    cursor: pointer;
+}
+
+
+#btns h3 {
     color: white;
     background-color: rgb(82, 82, 82);
     border-radius: 50%;
@@ -121,15 +144,15 @@ body {
     align-items: center;
 }
 
-#player h3 i {
+#btns h3 i {
     font-size: 18px;
 }
 
-#player h3:active {
+#btns h3:active {
     transform: scale(0.92);
 }
 
-#player:hover {
+#btns h3:hover {
     background-color: rgb(32, 32, 32);
 }
 
@@ -151,6 +174,11 @@ body {
         width: 100%;
         padding: 3vw;
         overflow-y: auto;
+    }
+
+    #right h1 {
+        font-size: 20px;
+        padding-bottom: 9px;
     }
 
     #right h3 {
@@ -205,12 +233,50 @@ body {
     #player h3 i {
         font-size: 16px;
     }
+    #player h1{
+        padding-top: 6px;
+        color: white;
+        font-size: 8px;
+        font-family: myfont2;
+        font-weight: 18;
+        cursor: pointer;
+    }
+}
 
-
-
-    #right h1 {
-        font-size: 20px;
-        padding-bottom: 9px;
+/* Additional Media Queries for larger mobile screens and tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #main {
+        padding: 5vw 5vw;
     }
 
+    #left, #right {
+        width: 50%;
+        height: auto;
+    }
+
+    #right h1 {
+        font-size: 22px;
+    }
+
+    #right h3 {
+        font-size: 18px;
+    }
+
+    .nohacard {
+        flex-direction: column;
+    }
+
+    #player h1{
+        padding-top: 9px;
+        color: white;
+        font-size: 6px;
+        font-family: myfont2;
+        font-weight: 18;
+        cursor: pointer;
+    }
+
+    .nohacard img {
+        width: 100%;
+        height: auto;
+    }
 }
